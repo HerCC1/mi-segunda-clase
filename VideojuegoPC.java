@@ -48,4 +48,35 @@ public class VideojuegoPC{
         }
         encendido = jugarOno;
     }
+    
+    public String getInfo(){
+        String apagadoONo;
+        if(encendido) {
+            apagadoONo = "Encendido";
+        } else {
+            apagadoONo= "Apagado";
+        }
+        String todo = " | Nombre " + nombreVideojuego + " | Jugadores " + cantidadDeJugadores + "| Estado " + apagadoONo;
+        return todo;
+    }
+    
+    public void getTodaInfo(){
+        String apagadoONo;
+        if(encendido) {
+            apagadoONo = "Encendido";
+        } else {
+            apagadoONo= "Apagado";
+        }
+        String pluralONo;
+        if(cantidadDeJugadores == 1) {
+            pluralONo = " jugador";
+        } else {
+            pluralONo = " jugadores";
+        }
+        System.out.println("-------");
+        System.out.println("Este juego se llama " + nombreVideojuego);
+        System.out.println("Hay un total de " + cantidadDeJugadores + pluralONo);
+        System.out.println("Estado " + apagadoONo);
+        System.out.println("-------");
+    }
 }
