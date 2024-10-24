@@ -1,15 +1,15 @@
 public class VideojuegoPC{
     //Nombre del juego
-    String nombreVideojuego;
+    private String nombreVideojuego;
     //Cantidad de jugadores que queremos
-    int cantidadDeJugadores;
+    private int cantidadDeJugadores;
     //Encendido o apagao
-    boolean encendido;
+    private boolean encendido;
     
-    public VideojuegoPC(int jugadores, boolean corriente){
-        nombreVideojuego = "ComoEstasElJuego";
+    public VideojuegoPC(int jugadores, String nombreParaVideojuego){
+        encendido = true;
         cantidadDeJugadores = jugadores;
-        encendido = corriente;
+        nombreVideojuego = nombreParaVideojuego;
     }
     /**
      Vemos el nombre*/
@@ -60,7 +60,7 @@ public class VideojuegoPC{
         return todo;
     }
     
-    public void getTodaInfo(){
+    public void printTodaInfo(){
         String apagadoONo;
         if(encendido) {
             apagadoONo = "Encendido";
@@ -73,10 +73,7 @@ public class VideojuegoPC{
         } else {
             pluralONo = " jugadores";
         }
-        System.out.println("-------");
-        System.out.println("Este juego se llama " + nombreVideojuego);
-        System.out.println("Hay un total de " + cantidadDeJugadores + pluralONo);
-        System.out.println("Estado " + apagadoONo);
-        System.out.println("-------");
+        System.out.println("Este juego se llama " + nombreVideojuego + " Hay un total de " + cantidadDeJugadores + pluralONo + "    Estado " + apagadoONo);
+        
     }
 }
